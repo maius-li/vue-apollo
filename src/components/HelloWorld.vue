@@ -1,8 +1,8 @@
 <template>
   <div class="welcome">
     <div class="welcome-wrap">
-      <input class="phone" placeholder="Phone number">
-      <input class="pwd" placeholder="Password">
+      <input class="phone" placeholder="手機號碼">
+      <input class="pwd" placeholder="密碼">
       <div class="login">登入</div>
       <div class="forget-pwd">忘記密碼</div>
     </div>
@@ -53,7 +53,7 @@ export default {
   width: 500px;
   min-height: 300px;
   margin: 0 auto;
-  background-color: #133308;
+  background-color: #FFF;
   padding-top: 100px;
 }
 .welcome-wrap {
@@ -64,6 +64,7 @@ export default {
   padding: 50px;
   box-sizing: border-box;
   border-radius: 3px;
+  border: 1px solid #D8DEE2;
 }
 input {
   background-color: #CDE3C8;

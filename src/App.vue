@@ -17,7 +17,7 @@ html,body,#app{
   margin: 0;
 }
 #app {
-  background-color: #133308;
+  background-color: #FFF;
 }
 
 </style>
