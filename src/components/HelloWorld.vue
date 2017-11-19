@@ -3,8 +3,8 @@
     <div class="welcome-wrap">
       <input class="phone" placeholder="手機號碼">
       <input class="pwd" placeholder="密碼">
-      <div class="login">登入</div>
-      <div class="forget-pwd">忘記密碼</div>
+      <a class="login" href="###">登入</a>
+      <a class="forget-pwd" href="###" type="password">忘記密碼</a>
     </div>
   </div>
 </template>
@@ -36,18 +36,34 @@ export default {
         console.log(networkStatus);
       },
     },
+    userName: {
+      query: gql`query{
+        viewer {
+          _id
+          hint
+          path
+          phone
+          username
+        }
+      }`,
+      result({ data, loader, networkStatus }) {
+        console.log(4456, data, loader, networkStatus);
+        console.log(77, networkStatus);
+      },
+    },
   },
   data() {
     return {
       msg: 'Welcome to Your Vue.js App',
       test: '',
+      userName: '',
     };
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 
 .welcome {
   width: 500px;
@@ -55,25 +71,30 @@ export default {
   margin: 0 auto;
   background-color: #FFF;
   padding-top: 100px;
+  .welcome-wrap {
+    background-color: #FFF;
+    min-height: 300px;
+    width: 400px;
+    margin: 0 auto;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid #D8DEE2;
+  }
 }
-.welcome-wrap {
-  background-color: #FFF;
-  min-height: 300px;
-  width: 400px;
-  margin: 0 auto;
-  padding: 50px;
-  box-sizing: border-box;
-  border-radius: 3px;
-  border: 1px solid #D8DEE2;
-}
+
 input {
-  background-color: #CDE3C8;
+  background-color: #D4F8CC;;
   width: 100%;
   line-height: 40px;
   border: 0;
   border-radius: 5px;
-  padding-left: 20px;
+  padding: 0 20px;
   box-sizing: border-box;
+  color: #8A9086;
+}
+input::placeholder {
+  color: #070807;
 }
 .pwd {
   margin-top: 10px;
@@ -87,19 +108,23 @@ input {
   font-size: 18px;
   text-align: center;
   line-height: 40px;
+  display: block;
+  text-decoration: none;
 
 }
 .login {
-  background-color: #2E660B;
+  background-color: #489B14;
 }
 .forget-pwd {
-  background-color: #0D7AC0;
+  color: #8A9086;
+  float: right;
+  text-align: right;
 }
 .login:hover {
   background-color: #54A323;
 } 
 .forget-pwd:hover {
-  background-color: #388EC5;
+  color: #ED3516;
 }
 
 </style>
