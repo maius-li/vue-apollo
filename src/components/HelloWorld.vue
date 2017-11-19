@@ -1,23 +1,11 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h1>{{test}}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+  <div class="welcome">
+    <div class="welcome-wrap">
+      <input class="phone" placeholder="Phone number">
+      <input class="pwd" placeholder="Password">
+      <div class="login">登入</div>
+      <div class="forget-pwd">忘記密碼</div>
+    </div>
   </div>
 </template>
 
@@ -60,21 +48,57 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+
+.welcome {
+  width: 500px;
+  min-height: 300px;
+  margin: 0 auto;
+  background-color: #133308;
+  padding-top: 100px;
+}
+.welcome-wrap {
+  background-color: #FFF;
+  min-height: 300px;
+  width: 400px;
+  margin: 0 auto;
+  padding: 50px;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+input {
+  background-color: #CDE3C8;
+  width: 100%;
+  line-height: 40px;
+  border: 0;
+  border-radius: 5px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.pwd {
+  margin-top: 10px;
+}
+.login, 
+.forget-pwd {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  color: #FFF;
+  font-size: 18px;
+  text-align: center;
+  line-height: 40px;
+
+}
+.login {
+  background-color: #2E660B;
+}
+.forget-pwd {
+  background-color: #0D7AC0;
+}
+.login:hover {
+  background-color: #54A323;
+} 
+.forget-pwd:hover {
+  background-color: #388EC5;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>
