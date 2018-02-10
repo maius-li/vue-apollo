@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/components/Home';
 import Like from '@/components/Like';
-import HelloWorld from '@/components/HelloWorld';
+import Manage from '@/components/Manage';
 
 Vue.use(Router);
 
@@ -21,7 +21,7 @@ export default new Router({
     {
       path: '/',
       name: 'manage',
-      component: HelloWorld,
+      component: Manage,
     },
   ],
 });
