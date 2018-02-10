@@ -1,6 +1,6 @@
 <template>
   <div class="header-wrap">
-    <div class="header-logo"></div>
+    <div class="logo"></div>
     <div class="header-link-wrap">
       <a class="header-link">首頁</a><span>|</span>
       <a class="header-link">好評推薦</a>
@@ -27,16 +27,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 .header-wrap {
   color:#C2C2C2;
   height: 72px;
   background-color: #FFF;
-  /* .header-logo,
-  .header-link-wrap {
-    float: left;
-  } */
 }
 
 </style>
