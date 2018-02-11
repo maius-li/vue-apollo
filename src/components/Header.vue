@@ -33,6 +33,9 @@ export default {
   color:#C2C2C2;
   height: 72px;
   background-color: #FFF;
+  .header-link-wrap {
+    color: red;
+  }
 }
 
 </style>
